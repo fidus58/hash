@@ -14,7 +14,7 @@ public:
     X* i_= 0;
 
     X():i_{this} {}
-    //X(const X& other):i_{other.i_}{std::cout<<"copy\n";}
+    X(const X& other):i_{this}{std::cout<<"copy\n";}
     friend std::ostream& operator<<
     (std::ostream& o, const X& x)
     {return o<<x.i_;}
